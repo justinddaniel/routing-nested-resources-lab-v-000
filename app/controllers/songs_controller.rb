@@ -12,7 +12,7 @@ class SongsController < ApplicationController
   end
 
   def show
-    if Song.find_by(id: :song_id)
+    if Song.find(params[:id]) != nil
       @song = Song.find(params[:id])
     else
       flash[:alert] = "Song not found."
