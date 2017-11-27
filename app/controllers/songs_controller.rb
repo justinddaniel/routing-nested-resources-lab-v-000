@@ -17,7 +17,7 @@ class SongsController < ApplicationController
     else
       flash[:alert] = "Song not found."
       if params[:artist_id]
-        redirect_to artist_songs_path
+        redirect_to artist_songs_path(@artist)
       else
         redirect_to songs_path
       end
