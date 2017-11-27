@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   resources :songs do
     resources :artists, only: [:show, :index]
   end
-    
+
 end
